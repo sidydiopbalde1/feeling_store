@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Feeling Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header></header>
+
+  <main>
+    <div class="conteneur">
+      <h1 class="titre-page">Contactez-nous</h1>
+
+      <section class="contact-section">
+        <!-- Informations de contact -->
+        <div class="contact-info">
+          <p>Une question ? Une commande sur mesure ? Écrivez-nous !</p>
+          <p>Téléphone / WhatsApp : 76 289 55 63</p>
+          <p>Dakar, Sénégal</p>
+        </div>
+
+        <!-- Formulaire compatible Netlify Forms -->
+        <form class="formulaire-contact" name="contact"
+              method="POST" data-netlify="true"
+              netlify-honeypot="bot-field">
+          <!-- Champ anti-spam caché -->
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="champ-cache" style="display:none;">
+            <label>Ne pas remplir : <input name="bot-field" /></label>
+          </p>
+
+          <div class="champ-formulaire">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required
+                   placeholder="Votre nom complet" />
+          </div>
+
+          <div class="champ-formulaire">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required
+                   placeholder="votre@email.com" />
+          </div>
+
+          <div class="champ-formulaire">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required
+                      placeholder="Votre message..."></textarea>
+          </div>
+
+          <button type="submit" class="bouton bouton-primaire">
+            Envoyer le message
+          </button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script src="js/produits.js"></script>
+  <script src="js/panier.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

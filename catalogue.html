@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalogue - Feeling Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header></header>
+
+  <main>
+    <div class="conteneur">
+      <h1 class="titre-page">Catalogue</h1>
+
+      <!-- Barre de filtres et recherche -->
+      <div class="barre-filtres">
+        <label for="filtre-categorie">Catégorie :</label>
+        <select id="filtre-categorie">
+          <option value="Tous">Tous</option>
+          <option value="Homme">Homme</option>
+          <option value="Femme">Femme</option>
+          <option value="Accessoires">Accessoires</option>
+        </select>
+
+        <label for="recherche">Rechercher :</label>
+        <input type="search" id="recherche" placeholder="Nom du produit..." />
+
+        <label for="tri-prix">Trier par prix :</label>
+        <select id="tri-prix">
+          <option value="aucun">Aucun tri</option>
+          <option value="croissant">Prix croissant</option>
+          <option value="decroissant">Prix décroissant</option>
+        </select>
+      </div>
+
+      <!-- Grille des produits -->
+      <div class="grille-produits" id="grille-catalogue">
+        <!-- Les produits sont affichés par JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script src="js/produits.js"></script>
+  <script src="js/panier.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
