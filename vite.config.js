@@ -1,16 +1,19 @@
-import { defineConfig } from 'vite'
-import { resolve } from 'path'
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { defineConfig } from 'vite';
+
+const racine = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-         catalogue: resolve(__dirname, 'catalogue.html'),
-          panier: resolve(__dirname, 'panier.html'),
-         contact: resolve(__dirname, 'contact.html'),
-        produit : resolve(__dirname, 'produit.html')
-      }
-    }
-  }
-})
+        accueil: resolve(racine, 'index.html'),
+        catalogue: resolve(racine, 'catalogue.html'),
+        produit: resolve(racine, 'produit.html'),
+        panier: resolve(racine, 'panier.html'),
+        contact: resolve(racine, 'contact.html'),
+      },
+    },
+  },
+});
